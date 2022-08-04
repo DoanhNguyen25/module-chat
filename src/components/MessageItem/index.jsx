@@ -2,7 +2,7 @@ import React from "react";
 import { MessageItemWrapper } from "./style";
 const MessageItem = ({ item }) => {
   return (
-    <MessageItemWrapper>
+    <MessageItemWrapper onClick={() => console.log("hello")}>
       <div className="message__item--avatar">
         <img src={item.avatar} alt="avatar" />
       </div>

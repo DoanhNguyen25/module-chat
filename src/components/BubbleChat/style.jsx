@@ -42,11 +42,10 @@ export const BubbleChatWrapper = styled.div`
     top: 2.65rem;
     right: 1rem;
     border-radius: 1rem;
-    opacity: ${(props) => (props.isOpen ? 1 : 0)};
+    display: ${(props) => (props.isOpen ? "block" : "none")};
     transition: all 0.2s;
     padding: 0.5rem 0.5rem;
     overflow: auto;
-    z-index: 2;
     &::-webkit-scrollbar-track {
       -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
       border-radius: 10px;

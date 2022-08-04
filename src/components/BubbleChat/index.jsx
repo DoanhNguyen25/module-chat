@@ -4,11 +4,16 @@ import { FaRegCommentDots, FaRegUser } from "react-icons/fa";
 import MessageItem from "../MessageItem";
 import { BubbleChatWrapper, Title } from "./style";
 import { ListMessage } from "../../data/fakeData";
+import useOuterClick from "../../hooks/useOuterClick";
 const BubbleChat = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleDropDown = () => {
     setIsOpen(!isOpen);
   };
+
+  // const innerRef = useOuterClick((e) => {
+  //   console.log(e.target);
+  // });
   return (
     <BubbleChatWrapper isOpen={isOpen}>
       <div className="message--icon" onClick={toggleDropDown}>
@@ -22,7 +27,7 @@ const BubbleChat = () => {
         <span className="user-info--username">DoanhNguyeen</span>
       </div>
 
-      <div className="message--dropdown">
+      <div className="message--dropdown" >
         <Title>Chat</Title>
         <div className="message__search">
           <input type="text" placeholder="Tìm kiếm" />
